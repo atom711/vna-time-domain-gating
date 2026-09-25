@@ -1,7 +1,7 @@
 # Vector Network Analyzer (VNA) Error Calibration and Time-Domain Gating Pipelines
 
 ## Objective & Purpose
-This is a Python script to simulate a corrupted X/Ku-band frequency sweep to demonstrate how an Inverse Fast Fourier Transform (IFFT) can translate frequency data into a time-of-flight timeline which allows us to drop a mathematical gate around the material sample and clear out stray background reflections.
+This is a brief Python script to simulate a corrupted X/Ku-band frequency sweep to demonstrate how an Inverse Fast Fourier Transform (IFFT) can translate frequency data into a time-of-flight timeline which allows us to drop a mathematical gate around the material sample and clear out stray background reflections.
 
 Unwanted reflections from stationary background items such as walls, lab benches, etc., collide and constructively and destructively interfere with the desired reflections from a material sample. Those unwanted reflections also create a cyclical wave pattern—known as an **amplitude ripple** which distorts the true resonance nulls of your Device Under Test (DUT).
 
@@ -16,10 +16,7 @@ Converting the frequency data into a time-of-flight timeline maps reflections to
 4. **Spectral Restoration (The FFT Step):** Converts the gated time-domain spike back to frequency coordinates via a forward FFT, producing a ripple-free parabolic curve tracking true material traits.
 
 ## Repository Architecture
-- `src/time_domain_gating.py` - Core Python script that produces synthetic data generation, multipath reflections, Hanning windowing, and gating loops.
-- `plots/time_domain_plot.png` - Extracted time-of-flight linear map isolating the sample peak from the 3 ns wall reflection.
-- `plots/frequency_sweep_filtering.png` - Spectrum tracking curves showing the raw corrupted trace vs. the gated material curve.
-- `requirements.txt` - Python dependencies (`numpy`, `matplotlib`).
+- `src/time_domain_gating.py` - Core Python script that produces synthetic data, multipath reflections, does Hanning windowing and time gating, and creates plots. 
 
 ## Calibration Verification Data
 Results show perfect convergence when correcting corrupted wideband data:
