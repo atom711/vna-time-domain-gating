@@ -19,14 +19,11 @@ Converting the frequency data into a time-of-flight timeline maps reflections to
 - `src/time_domain_gating.py` - Core Python script that produces synthetic data, multipath reflections, does Hanning windowing and time gating, and creates plots. 
 
 ## Calibration Verification Data
-Results show perfect convergence when correcting corrupted wideband data:
+Results show convergence when correcting corrupted wideband data:
 
-| Measurement Node State | Frequency Sweep | Peak-to-Peak Ripple | Resonance Null (12 GHz) | Calibration Plane Reference |
-| :--- | :--- | :--- | :--- | :--- |
-| **Raw Corrupted Data** | 8.0 to 18.0 GHz | 0.30 dB | Masked / Distorted | Horn Antenna Throat |
-| **Gated / Cleaned Data** | 8.0 to 18.0 GHz | 0.00 dB | -30.00 dB | Target Material Surface |
-
+![VNA Time-Domain Profile](plots/gating_time.png)
 - **Time-Domain Profile:** Pins the main radar target interface exactly at 0 ns and flags the secondary multi-path wall reflection spike arriving at 3 ns.
+- ![Frequency Sweep Clutter Filtering](plots/gating_frequency.png)
 - **Frequency Profile:** The uncalibrated raw vector displays heavy sinusoidal oscillations across the entire band. Applying the time gate filters that out entirely, resulting in a smooth, parabolic resonance drop down to **-30 dB** right at the 12 GHz center mark.
 
 ## Execution & Requirements
