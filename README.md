@@ -1,4 +1,4 @@
-# Vector Network Analyzer (VNA) Error Calibration and Time-Domain Gating Pipelines
+# Vector Network Analyzer (VNA) Error Calibration and Time-Domain Gating
 
 ## Objective & Purpose
 This is a brief Python script to simulate a corrupted X/Ku-band frequency sweep to demonstrate how an Inverse Fast Fourier Transform (IFFT) can translate frequency data into a time-of-flight timeline which allows us to drop a mathematical gate around the material sample and clear out stray background reflections.
