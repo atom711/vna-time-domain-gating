@@ -23,7 +23,7 @@ Results show convergence when correcting corrupted wideband data:
 
 ![VNA Time-Domain Profile](plots/gating_time.png)
 - **Time-Domain Profile:** Pins the main radar target interface exactly at 0 ns and flags the secondary multi-path wall reflection spike arriving at 3 ns.
-- ![Frequency Sweep Clutter Filtering](plots/gating_frequency.png)
+![Frequency Sweep Clutter Filtering](plots/gating_frequency.png)
 - **Frequency Profile:** The uncalibrated raw vector displays heavy sinusoidal oscillations across the entire band. Applying the time gate filters that out entirely, resulting in a smooth, parabolic resonance drop down to **-30 dB** right at the 12 GHz center mark.
 
 ## Execution & Requirements
